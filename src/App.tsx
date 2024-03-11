@@ -1,7 +1,10 @@
+import ImageSlicer from "./ImageSlicer"
+
 function App() {
 
   return (
     <>
+      <ImageSlicer />
     </>
   )
 }
