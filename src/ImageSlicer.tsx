@@ -73,4 +73,5 @@ background-color: blue;
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: space-between;
 `
