@@ -5,16 +5,20 @@ type SpacerProps = {
   size: number;
 }
 
-function getSize({ axis, size }: SpacerProps) {
-  return axis === 'vertical' ? `1px` : `${size}px`;
+function getWidth({ axis, size }: SpacerProps) {
+  return axis === 'vertical' ? `${size}px` : `1px`;
+}
+
+function getHeight({ axis, size }: SpacerProps) {
+  return axis === 'horizontal' ? `${size}px` : `100%`;
 }
 
 const Spacer = styled.span<SpacerProps>`
 display: block;
-width: ${(props) => getSize(props)};
-min-width: ${(props) => getSize(props)};
-height: ${(props) => getSize(props)};
-min-height: ${(props) => getSize(props)};
+width: ${(props) => getWidth(props)};
+min-width: ${(props) => getWidth(props)};
+height: ${(props) => getHeight(props)};
+min-height: ${(props) => getHeight(props)};
 `
 
 export default Spacer;
